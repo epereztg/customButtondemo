@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Checkout - Demo</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+  <header class="topbar">
+    <div class="topbar-inner">DECATHLON <span class="topbar-sep">|</span> Checkout demo</div>
+  </header>
+
+  <main class="page">
+    <div class="main-col">
+
+      <section class="product-card">
+        <div class="product-thumb" aria-hidden="true">👟</div>
+        <div class="product-info">
+          <div class="product-brand">BULLPADEL</div>
+          <div class="product-name">Bullpadel Indiga M 26V Women's Padel Shoes</div>
+          <div class="product-price">&euro;74.99</div>
+          <div class="product-qty">(1 item)</div>
+        </div>
+      </section>
+
+
+
+      <h1 class="section-title">Payment</h1>
+
+      <section class="payment-methods" id="payment-methods">
+
+        <div class="payment-method" data-method="card">
+          <button class="method-header" type="button">
+            <span class="method-name">Card</span>
+            <span class="method-right">
+              <img class="method-logo" src="images/mastercard-logo.svg" alt="Mastercard" />
+              <img class="method-logo" src="images/visa-logo.svg" alt="Visa" />
+              <span class="chevron">&#9662;</span>
+            </span>
+          </button>
+          <div class="method-panel">
+            <p class="method-note">Enter your card details to pay (not implemented in this demo).</p>
+          </div>
+        </div>
+
+        <div class="payment-method" data-method="revolut-pay">
+          <button class="method-header" type="button">
+            <span class="method-name">Revolut Pay</span>
+            <span class="method-right">
+              <span class="method-amount" hidden>Amount to pay &euro;74.99</span>
+              <img class="method-logo" src="images/revolut-logo.svg" alt="Revolut Pay" />
+              <span class="chevron">&#9662;</span>
+            </span>
+          </button>
+          <div class="method-panel">
+            <p class="method-info">
+              <span class="info-icon" aria-hidden="true">&#9432;</span>
+              Click "Pay now" to complete your payment with Revolut Pay
+            </p>
+          </div>
+        </div>
+
+        <div class="payment-method" data-method="google-pay">
+          <button class="method-header" type="button">
+            <span class="method-name">Google Pay</span>
+            <span class="method-right">
+              <img class="method-logo method-logo-wide" src="images/googlepay-logo.svg" alt="Google Pay" />
+              <span class="chevron">&#9662;</span>
+            </span>
+          </button>
+          <div class="method-panel">
+            <p class="method-note">This payment method is for visual demonstration only.</p>
+          </div>
+        </div>
+
+        <div class="payment-method" data-method="bizum">
+          <button class="method-header" type="button">
+            <span class="method-name">Bizum</span>
+            <span class="method-right">
+              <img class="method-logo method-logo-wide" src="images/bizum-logo.svg" alt="Bizum" />
+              <span class="chevron">&#9662;</span>
+            </span>
+          </button>
+          <div class="method-panel">
+            <p class="method-note">This payment method is for visual demonstration only.</p>
+          </div>
+        </div>
+
+        <div class="payment-method" data-method="paypal">
+          <button class="method-header" type="button">
+            <span class="method-name">Paypal</span>
+            <span class="method-right">
+              <img class="method-logo" src="images/paypal-logo.svg" alt="PayPal" />
+              <span class="chevron">&#9662;</span>
+            </span>
+          </button>
+          <div class="method-panel">
+            <p class="method-note">This payment method is for visual demonstration only.</p>
+          </div>
+        </div>
+
+        <div class="payment-method" data-method="klarna">
+          <button class="method-header" type="button">
+            <span class="method-name">Klarna - Pay in 3 instalments at 0% APR</span>
+            <span class="method-right">
+              <img class="method-logo method-logo-wide" src="images/klarna-logo.svg" alt="Klarna" />
+              <span class="chevron">&#9662;</span>
+            </span>
+          </button>
+          <div class="method-panel">
+            <p class="method-note">This payment method is for visual demonstration only.</p>
+          </div>
+        </div>
+
+        <div class="payment-method" data-method="giftcard">
+          <button class="method-header" type="button">
+            <span class="method-name">Gift card or voucher</span>
+            <span class="method-right">
+              <img class="method-logo" src="images/decathlon-logo.svg" alt="Decathlon" />
+              <span class="chevron">&#9662;</span>
+            </span>
+          </button>
+          <div class="method-panel">
+            <p class="method-note">This payment method is for visual demonstration only.</p>
+          </div>
+        </div>
+
+      </section>
+
+
+
+      <p class="legal">
+        By clicking "Pay now" you accept our
+        <a href="#">terms of sale</a>, <a href="#">terms of use</a>,
+        <a href="#">return policy</a> and <a href="#">privacy policy</a>
+      </p>
+
+      <div id="payment-status" class="payment-status" hidden></div>
+
+      <button id="pay-button" class="pay-button" type="button">Pay now</button>
+
+    </div>
+
+    <aside class="side-col">
+      <h2 class="section-title">Order summary</h2>
+      <div class="summary-row">
+        <span>Subtotal (1 item)</span>
+        <span>&euro;74.99</span>
+      </div>
+      <hr />
+      <div class="summary-row">
+        <span>Shipping</span>
+      </div>
+      <div class="summary-row summary-sub">
+        <span>Shipped by <strong>Decathlon</strong></span>
+        <span>Free</span>
+      </div>
+      <hr />
+      <div class="summary-row summary-total">
+        <span>Order total (VAT incl.)</span>
+        <span>&euro;74.99</span>
+      </div>
+    </aside>
+  </main>
+
+  <script src="js/checkout.js"></script>
+</body>
+
+</html>
